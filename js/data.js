@@ -71,17 +71,22 @@ window.ARCHIVE = {
     {
       category: "Problem Solving",
       code: "CPX",
-      items: [{ name: "Competitive Programming", level: 70, status: "operational" }],
+      items: [
+        { name: "Competitive Programming (C++)", level: 70, status: "operational" },
+        { name: "Data structures & algorithms", level: 70, status: "operational" },
+      ],
     },
     {
       category: "AI / ML",
       code: "AIM",
-      items: [{ name: "Machine Learning", level: 50, status: "calibrating" }],
+      items: [{ name: "Machine Learning (Python)", level: 50, status: "calibrating" }],
     },
     {
       category: "Languages",
       code: "LNG",
       items: [
+        { name: "C++", level: 75, status: "operational" },
+        { name: "Python", level: 65, status: "operational" },
         { name: "JavaScript", level: 70, status: "operational" },
         { name: "HTML", level: 80, status: "operational" },
         { name: "CSS", level: 75, status: "operational" },
