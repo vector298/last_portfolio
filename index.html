@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ishaan Roy — The Last Portfolio</title>
+  <meta name="description" content="The Last Portfolio of Ishaan Roy (vector298): a Doomsday survivor archive of skills, projects and contact channels." />
+  <meta name="theme-color" content="#0a0c0d" />
+  <meta property="og:title" content="Ishaan Roy — The Last Portfolio" />
+  <meta property="og:description" content="A digital survival archive: identity, arsenal, projects, final transmission." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Boot sequence -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__inner">
+      <pre class="boot__log" id="bootLog"></pre>
+      <div class="boot__bar"><span id="bootBar"></span></div>
+      <button class="boot__skip" id="bootSkip" type="button">[ skip &gt;&gt; ]</button>
+    </div>
+  </div>
+
+  <div class="fx-scan" aria-hidden="true"></div>
+  <div class="fx-noise" aria-hidden="true"></div>
+
+  <!-- HUD header -->
+  <header class="hud" id="hud">
+    <a class="hud__brand" href="#identity" aria-label="Back to top">
+      <span class="pulse" aria-hidden="true"></span>
+      <span>LAST<b>/</b>ARCHIVE</span>
+    </a>
+    <nav class="hud__nav" id="nav" aria-label="Archive sections">
+      <a href="#identity" data-idx="01">Identity</a>
+      <a href="#log" data-idx="02">Log</a>
+      <a href="#arsenal" data-idx="03">Arsenal</a>
+      <a href="#archives" data-idx="04">Archives</a>
+      <a href="#transmission" data-idx="05">Transmit</a>
+    </nav>
+    <div class="hud__clock" title="Time until network blackout">
+      <span class="hud__label">BLACKOUT IN</span>
+      <span id="countdown">--:--:--</span>
+    </div>
+    <button class="hud__menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span class="sr">Menu</span>
+    </button>
+  </header>
+
+  <div class="alert" role="status">
+    <span class="alert__tag">ALERT</span>
+    <div class="alert__track"><p id="ticker">GLOBAL NETWORK DEGRADING &bull; ALL SURVIVORS: PRESERVE YOUR STORY &bull; ARCHIVE UPLINK STABLE &bull;</p></div>
+  </div>
+
+  <main id="main">
+    <!-- 01 IDENTITY -->
+    <section class="section hero" id="identity" aria-labelledby="hero-name">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow"><span class="idx">01</span> SURVIVOR PROFILE // ID VERIFIED</p>
+          <h1 class="glitch" id="hero-name" data-text="">Ishaan Roy</h1>
+          <p class="hero__role">&gt; <span id="role"></span><span class="caret" aria-hidden="true">_</span></p>
+          <p class="hero__intro" id="intro"></p>
+          <ul class="chips" id="interests" aria-label="Areas of interest"></ul>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#archives">Open the archives</a>
+            <a class="btn" href="#transmission">Send transmission</a>
+          </div>
+        </div>
+        <aside class="idcard reveal" aria-label="Survivor ID card">
+          <div class="idcard__head">
+            <span>SURVIVOR ID</span><span class="idcard__no" id="idNo">#000</span>
+          </div>
+          <div class="idcard__body">
+            <div class="idcard__avatar">
+              <img src="https://avatars.githubusercontent.com/u/192250503?v=4&s=240" alt="Portrait of Ishaan Roy" width="120" height="120" loading="eager" onerror="this.remove()" />
+              <span class="idcard__scan" aria-hidden="true"></span>
+            </div>
+            <dl class="idcard__meta" id="idMeta"></dl>
+          </div>
+          <div class="idcard__foot">
+            <div class="barcode" aria-hidden="true"></div>
+            <span class="stamp">PRESERVE</span>
+          </div>
+        </aside>
+      </div>
+      <div class="hero__stats" id="stats" aria-label="Archive status"></div>
+    </section>
+
+    <!-- 02 SURVIVOR'S LOG -->
+    <section class="section" id="log" aria-labelledby="log-title">
+      <header class="section__head reveal">
+        <p class="eyebrow"><span class="idx">02</span> SURVIVOR'S LOG</p>
+        <h2 id="log-title">Recovered personal records</h2>
+        <p class="section__sub">Select an entry. Some files were damaged in the collapse.</p>
+      </header>
+      <div class="logterm reveal">
+        <div class="logterm__tabs" role="tablist" aria-label="Log entries" id="logTabs"></div>
+        <div class="logterm__screen" role="tabpanel" id="logPanel" tabindex="0" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 03 ARSENAL -->
+    <section class="section" id="arsenal" aria-labelledby="arsenal-title">
+      <header class="section__head reveal">
+        <p class="eyebrow"><span class="idx">03</span> THE ARSENAL</p>
+        <h2 id="arsenal-title">Tools carried into the dark</h2>
+        <p class="section__sub">Signal strength shows how battle-tested each tool is. <span class="legend"><i class="dot dot--ok"></i>operational <i class="dot dot--cal"></i>calibrating (learning)</span></p>
+      </header>
+      <div class="filters reveal" role="group" aria-label="Filter skills" id="skillFilters"></div>
+      <div class="arsenal" id="arsenalGrid"></div>
+      <div class="langscan reveal" id="langScan" hidden>
+        <p class="eyebrow">LIVE SCAN // LANGUAGES DETECTED ACROSS PUBLIC REPOSITORIES</p>
+        <div class="langscan__bar" id="langBar"></div>
+        <ul class="langscan__legend" id="langLegend"></ul>
+      </div>
+    </section>
+
+    <!-- 04 ARCHIVES -->
+    <section class="section" id="archives" aria-labelledby="archives-title">
+      <header class="section__head reveal">
+        <p class="eyebrow"><span class="idx">04</span> THE ARCHIVES</p>
+        <h2 id="archives-title">Project records</h2>
+        <p class="section__sub">Curated records first, then repositories recovered live from the network. Open a record for the full dossier.</p>
+      </header>
+      <div class="projects" id="projectGrid"></div>
+      <p class="recover" id="recoverStatus" aria-live="polite"></p>
+    </section>
+
+    <!-- 05 TRANSMISSION -->
+    <section class="section" id="transmission" aria-labelledby="tx-title">
+      <header class="section__head reveal">
+        <p class="eyebrow"><span class="idx">05</span> FINAL TRANSMISSION</p>
+        <h2 id="tx-title">Open a channel before the lights go out</h2>
+        <p class="section__sub">Pick a frequency, or use the terminal. Type <kbd>help</kbd>.</p>
+      </header>
+      <div class="tx">
+        <ul class="channels reveal" id="channels"></ul>
+        <div class="term reveal">
+          <div class="term__bar"><i></i><i></i><i></i><span>survivor@last-archive: ~</span></div>
+          <div class="term__out" id="termOut" aria-live="polite"></div>
+          <form class="term__in" id="termForm" autocomplete="off">
+            <label for="termInput">$</label>
+            <input id="termInput" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-label="Terminal command" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>END OF ARCHIVE &bull; <span id="year"></span> &bull; Ishaan Roy (vector298) &bull; built by hand, no framework survived</p>
+    <a href="#identity">Return to top &uarr;</a>
+  </footer>
+
+  <!-- Project dossier dialog -->
+  <dialog class="dossier" id="dossier" aria-labelledby="dossierTitle">
+    <div class="dossier__inner" id="dossierBody"></div>
+  </dialog>
+
+  <noscript><p class="noscript">This archive needs JavaScript to decrypt its records.</p></noscript>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
