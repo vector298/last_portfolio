@@ -13,12 +13,13 @@ window.ARCHIVE = {
     name: "Ishaan Roy",
     callsign: "vector298",
     // Cycled by the typewriter in the hero.
-    roles: ["Developer", "Builder of web things", "Student of the craft"],
+    roles: ["Mining Engineering @ NITK", "Competitive programmer", "Machine learning explorer", "Builder of web things"],
     intro:
-      "I build things for the web and learn by shipping them. This archive is my record: " +
+      "Mining engineering student at NITK who digs for solutions in code instead of the ground. " +
+      "I solve competitive programming problems, explore machine learning and build things for the web. This archive is my record: " +
       "who I am, the tools I carry, and the work I made before the lights went out.",
     location: null, // e.g. "Kolkata, India"
-    interests: ["Web development", "Interface design", "Open source", "Creative coding"],
+    interests: ["Competitive programming", "Machine learning", "Web development", "Problem solving"],
     status: "Open to collaborations & internships",
   },
 
@@ -34,11 +35,17 @@ window.ARCHIVE = {
         "Learned that the fastest way to understand something is to build a small, broken version of it — then fix it.",
       ],
     },
-    { id: "EDUCATION", title: "Education", lines: null }, // e.g. ["B.Tech CSE — XYZ University (2024–2028)"]
+    {
+      id: "EDUCATION",
+      title: "Education",
+      lines: ["Mining Engineering — National Institute of Technology Karnataka (NITK), Surathkal."],
+    },
     {
       id: "INTERESTS",
       title: "Technical interests",
       lines: [
+        "Competitive programming: algorithms, data structures and squeezing solutions under the time limit.",
+        "Machine learning: teaching models to find patterns in data.",
         "Frontend engineering and interfaces that feel alive.",
         "Developer tooling and automating the boring parts.",
         "How the web works under the hood: browsers, networks, deployment.",
@@ -61,6 +68,16 @@ window.ARCHIVE = {
   // The Arsenal. level: 0–100 (signal strength), status: "operational" | "calibrating" (learning)
   // Only list what you genuinely know.
   skills: [
+    {
+      category: "Problem Solving",
+      code: "CPX",
+      items: [{ name: "Competitive Programming", level: 70, status: "operational" }],
+    },
+    {
+      category: "AI / ML",
+      code: "AIM",
+      items: [{ name: "Machine Learning", level: 50, status: "calibrating" }],
+    },
     {
       category: "Languages",
       code: "LNG",
@@ -144,7 +161,7 @@ window.ARCHIVE = {
   contact: {
     email: "ishaandasroy4000@gmail.com",
     github: "https://github.com/vector298",
-    linkedin: null, // e.g. "https://www.linkedin.com/in/your-handle"
+    linkedin: "https://www.linkedin.com/in/ishaan-roy-141534326/",
     other: [], // e.g. [{ label: "X / Twitter", url: "https://x.com/you" }]
   },
 };
